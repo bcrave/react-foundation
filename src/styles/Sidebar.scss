@@ -1,0 +1,49 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  // left: -100%;
+  height: calc(100vh - 30px);
+  width: 200px;
+  transform: translate(1px, -1px);
+  background-color: var(--bg);
+  border: var(--border);
+  padding: 1rem;
+  overflow: hidden;
+  transition: height var(--speed) ease;
+
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 40px;
+
+    .sidebar-item {
+      justify-content: center;
+      width: 90%;
+
+      .sidebar-item-icon {
+        position: absolute;
+        left: 50px;
+      }
+    }
+  }
+}
+
+.active {
+  left: 0;
+}
+
+@keyframes slide-in {
+  from {
+    right: -200px;
+  }
+  to {
+    right: 0;
+  }
+}

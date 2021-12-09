@@ -1,13 +1,13 @@
 import "../styles/Navbar.scss";
+import Searchbar from "./Searchbar";
 
-const Navbar = (props) => {
-  return ( 
+const Navbar = ({ children, data, setSearchTerm }) => {
+  return (
     <nav className="navbar">
-      <ul className="navbar-nav">
-        {props.children}
-      </ul>
+      <Searchbar data={data} setSearchTerm={setSearchTerm} />
+      <ul className="navbar-nav">{children}</ul>
     </nav>
-   );
-}
- 
+  );
+};
+
 export default Navbar;

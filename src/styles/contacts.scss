@@ -1,0 +1,27 @@
+.contacts {
+  ul {
+    height: calc(100vh - var(--nav-size));
+    width: 180px;
+    background: var(--bg-accent);
+    overflow: hidden;
+    overflow-y: scroll;
+
+    li {
+      padding-inline: 1rem;
+      border-bottom: 1px solid var(--bg);
+      background: var(--bg-accent);
+      color: var(--text-color);
+      transition: all 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+      }
+
+      p {
+        margin: 0;
+        padding-block: 15px;
+      }
+    }
+  }
+}
